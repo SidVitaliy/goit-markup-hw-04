@@ -1,9 +1,13 @@
 :root {
+    --main-color: #ffffff;
     --accent-color: #2196F3;
     --link-title-text-color: #212121;
     --desc-text-color: #757575;
+    --supporting-color: #F5F4FA; 
+
     --main-font: 'Roboto', sans-serif;
-    --secondary-font: 'Raleway', sans-serif;    
+    --secondary-font: 'Raleway', sans-serif; 
+     
 }
 
 h1,
@@ -201,7 +205,7 @@ body {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #FFFFFF;   
+    color: var(--main-color);   
    
 }
 
@@ -216,7 +220,7 @@ body {
     line-height: 1.875;
     display: block;   
     letter-spacing: 0.06em;
-    color: #FFFFFF;
+    color: var(--main-color);
     cursor: pointer;
     background-color: var(--accent-color); 
     border: none;
@@ -319,10 +323,9 @@ body {
 /*=========Our Team=================*/
 
 .team{
-    background: #F5F4FA;   
-    width: 1600px;
-    height: 708px;
-    margin: 0 auto;
+
+    background: var(--supporting-color);   
+    
 }
 
 .team-title {
@@ -348,7 +351,7 @@ body {
     flex-basis: calc( (100% - 120px) / 4);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    background: #FFFFFF;
+    background: var(--main-color);
 }
 
 .team-descr-container{
@@ -364,7 +367,8 @@ body {
     line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--link-title-text-color);   
+    color: var(--link-title-text-color);  
+    margin-bottom: 10px; 
 }
 
 .team-function{
@@ -374,7 +378,6 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--desc-text-color);
-    margin-top: 10px; 
     margin-bottom: 16px;  
 }
 .team-social-list{
@@ -389,7 +392,7 @@ body {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: #FFFFFF;
+    background-color: var(--main-color);
     fill: #AFB1B8;
 }
 
@@ -400,7 +403,7 @@ body {
 
 .team-social-link:hover,
 .team-social-link:focus {
-    fill: #FFFFFF;
+    fill: var(--main-color);
     background-color: var(--accent-color);
 }
 
@@ -409,17 +412,7 @@ body {
 /*=========Our Team END=================*/
 
 /*=========Our Clients==================*/
-
-.our-clients-container {
-    display: block;
-    width: 1170px;
-    height: 184px;
-    margin: 0 auto;
-    margin-top: 94px;    
-    margin-bottom: 94px;
    
-}
-
 .our-clients-item {
     font-family: var(--main-font);    
     font-size: 36px;
@@ -432,41 +425,46 @@ body {
 
 .our-clients-list{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;   
     
 }
 
-.our-clients-desc{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 170px;
+.our-clients-desc{  
     height: 92px;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
-    flex-basis: calc( (100% - 180px) / 6);    
+    flex-basis: calc( (100% - 150px) / 6);    
 }
 
 .our-clients-desc:not(:last-child){
     margin-right: 30px;
 }
 
+.our-clients-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+}
+
 .svg-our-clients{
     fill: var(--desc-text-color);
 }
 
-.our-clients-desc:hover,
-.our-clients-desc:focus{    
+.our-clients-link:hover,
+.our-clients-link:focus{
     border-color: var(--accent-color);
+
 }
 
-.svg-our-clients:hover,
-.svg-our-clients:focus{
+.our-clients-link:hover .svg-our-clients,
+.our-clients-link:focus .svg-our-clients{    
+    
     fill: var(--accent-color);
 }
 
-    
+ 
 
 /*=========Our Clients END==================*/
 
@@ -477,22 +475,18 @@ body {
 /*=========FOOTER==================*/
 
 .footer{
-    display: flex;
     background: #2F303A;
     padding-top: 60px;
     padding-bottom: 60px;
-    padding-right: 878px;
-    list-style-type: none;
-    width: 1600px;
-    height: 252px;
-    margin: 0 auto;
+       
 }
 
 .footer-container{
+    display: flex;   
+   }
+
+.footer-address-container{
     margin-right: 70px;
-    width: 231px;
-    margin-left: 215px;
-    padding-left: 0px;
 }
 
 .footer-logo{
@@ -501,7 +495,7 @@ body {
 }
 
 .footer-logo-studio{
-    color: white;
+    color: var(--main-color);
 }
 
 .footer-address-list-link{
@@ -528,7 +522,7 @@ body {
     font-size: 14px;
     line-height: 1.71;    
     letter-spacing: 0.03em;
-    color: #FFFFFF;   
+    color: var(--main-color);   
     
 }
 
@@ -540,7 +534,7 @@ body {
 
 .footer-address-desc:hover,
 .footer-address-desc:focus{
-    color: white;
+    color: var(--main-color);
     
 }
 
@@ -549,13 +543,8 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-social{
-    display: block;
-    padding-top: 12px;
-    width: 206px;
-    height: 80px;
-    
-}
+
+
 
 .footer-social-item{
     font-family: var(--main-font);
@@ -563,38 +552,49 @@ body {
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--main-color);
     margin-bottom: 20px;
 }
 
 .footer-social-list{
     display: flex;
     justify-content: space-between;
-    margin-right: 10px;
 }
 
 .footer-social-list-link{
+    width: 44px;
+    height: 44px;
+}
+    
+
+.footer-social-list-link:not(:last-child){
+    margin-right: 10px;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus{
+    fill: var(--main-color);
+    background-color: var(--accent-color);
+
+}
+
+.footer-social-link{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); 
     
-}
-
-.footer-social-list-link:hover,
-.footer-social-list-link:focus{
-    fill: #FFFFFF;
-    background-color: var(--accent-color);
-
+    
 }
 
 .svg-footer-social{
     width: 20px;
     height: 20px;
-    fill: #FFFFFF;
+    fill: var(--main-color);
+    
 }
 
 
@@ -620,7 +620,7 @@ body {
 }
 .hero-button-desc:hover,
 .hero-button-desc:focus{
-    color: white;
+    color: var(--main-color);
     background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
    
